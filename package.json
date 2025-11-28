@@ -1,0 +1,25 @@
+{
+  "name": "customer-portal-mvp",
+  "version": "1.0.0",
+  "description": "Customer Portal MVP - Full Stack Application",
+  "private": true,
+  "workspaces": [
+    "FE",
+    "BE"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=BE\" \"npm run dev --workspace=FE\"",
+    "dev:fe": "npm run dev --workspace=FE",
+    "dev:be": "npm run dev --workspace=BE",
+    "build": "npm run build --workspace=FE && npm run build --workspace=BE",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
+
